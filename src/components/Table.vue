@@ -36,6 +36,7 @@ const sorting = computed(() => {
     if (sortAsc.value === "desc") modifier = -1;
     if (a[sort.value] < b[sort.value]) return -1 * modifier;
     if (a[sort.value] > b[sort.value]) return 1 * modifier;
+    
     return 0;
   });
 });

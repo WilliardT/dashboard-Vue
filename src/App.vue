@@ -70,6 +70,7 @@
             <Table />
           </section>
         </div>
+        <input type="text" placeholder="search..." v-model="searchValue">
       </div>
     </div>
   </div>
@@ -445,4 +446,22 @@ header {
   height: 56px;
   cursor: pointer;
 }
+
+input {
+  border: 1px solid #C6CACC;
+  border-radius: 10px;
+  width: 330px;
+  height: 32px;
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.25px;
+  position: absolute;
+  top: 500px;
+  background: none;
+  padding-left: 10px;
+}
+
 </style>
