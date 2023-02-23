@@ -1,8 +1,9 @@
 <template>
   <table>
     <thead>
+        <img src="../assets/icons/sort.png" alt="sort" @click="clickOnDate()" >
       <tr>
-        <th @click="clickOnDate(element)">Data</th>
+        <th>Data</th>
         <th>Summary1</th>
         <th>Summary2</th>
         <th>Summary3</th>
@@ -46,23 +47,16 @@ const dataTable = ref([
   { name: "Data4", sum1: 804, sum2: 804, sum3: 697, sum4: 40, sum5: 22 },
 ]);
 
-const emit = defineEmits(["sorting"]);
 
-const clickOnDate = (name) => {
-  emit("sorting", name());
-};
-
-const setSort = (name) => {
-  if (sort.value === name) {
-    if (sortAsc === "asc") {
-      sort.value = "desc";
-    } else {
-      sort.value = "asc";
-    }
+const clickOnDate = () => {
+  if(sortAsc.value === 'asc') {
+    sortAsc.value = 'desc'
   } else {
-    sort.value = name;
+    sortAsc.value = 'asc'
   }
+    
 };
+
 </script>
 
 <style>
@@ -75,6 +69,13 @@ th {
   font-size: 16px;
   letter-spacing: 0.44px;
   color: #919699;
+}
+
+thead > img {
+  position: absolute;
+  left: 427px;
+  top: 171px;
+  cursor: pointer;
 }
 
 .tableName {

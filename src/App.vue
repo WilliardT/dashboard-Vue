@@ -36,14 +36,14 @@
             <p>Display rows 2,4,6 etc</p>
           </div>
           <div class="typeSortDisable">
-            <img src="./assets/icons/round.png" alt="round" />
-            <span>Even rows of data</span>
-            <p>Display rows 2,4,6 etc</p>
+            <img src="./assets/icons/check.png" alt="check" />
+            <span>Odd rows of data</span><br>
+            <p>Display rows 1,3,5 etc</p>
           </div>
           <div class="typeSortActive">
-            <img src="./assets/icons/round.png" alt="round" />
-            <span>Even rows of data</span>
-            <p>Display rows 2,4,6 etc</p>
+            <img src="./assets/icons/print.png" alt="print" />
+            <span>All data</span>
+            <p>Display all data</p>
           </div>
         </div>
       </div>
@@ -382,6 +382,7 @@ header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  cursor: pointer;
 }
 
 .buttonNew > span {
@@ -397,7 +398,44 @@ header {
   margin-left: -25px;
 }
 
+.sortWrapper {
+  position: absolute;
+  top: 236px;
+  left: 102px;
+}
+
+.typeSortActive > span, .typeSortDisable > span {
+  font-family: 'Quicksand';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 0.44px;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+.typeSortActive > p, .typeSortDisable > p {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  display: flex;
+  align-items: flex-end;
+  letter-spacing: 0.4px;
+  color: #5E6366;
+}
+
+.typeSortActive > img, .typeSortDisable > img {
+  margin-right: 5px;
+  width: 15px;
+}
+
 .typeSortDisable {
+  border-radius: 10px;
+  width: 280px;
+  height: 56px;
+  cursor: pointer;
 }
 
 .typeSortActive {
@@ -405,5 +443,6 @@ header {
   border-radius: 10px;
   width: 280px;
   height: 56px;
+  cursor: pointer;
 }
 </style>
